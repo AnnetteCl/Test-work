@@ -1,0 +1,22 @@
+# Constants
+DEAD_LOAD_SLAB = 1.0  # kg/m²
+DEAD_LOAD_FIXTURES = 0.5  # kg/m²
+LIVE_LOAD_PEOPLE = 2.0  # kg/m²
+LIVE_LOAD_FURNITURE = 1.0  # kg/m²
+
+# Inputs
+slab_area = 100  # m²
+num_people = 50
+num_furniture_items = 100
+
+# Calculate the dead load
+dead_load = DEAD_LOAD_SLAB * slab_area + DEAD_LOAD_FIXTURES * slab_area
+
+# Calculate the live load
+live_load = LIVE_LOAD_PEOPLE * num_people + LIVE_LOAD_FURNITURE * num_furniture_items
+
+# Calculate the total load
+total_load = dead_load + live_load
+
+# Output the total load
+print("Total load on the floor slab:", total_load, "kg")
